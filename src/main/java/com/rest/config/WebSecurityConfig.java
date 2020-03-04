@@ -29,7 +29,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
   @Override
   protected void configure(HttpSecurity http) throws Exception {
-    http.csrf().disable();
+//    http.csrf().disable();
 
     http.authorizeRequests()
         .antMatchers("/allUsers")
@@ -45,6 +45,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     http.httpBasic().authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED));
 
-    http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+//    http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
   }
 }
